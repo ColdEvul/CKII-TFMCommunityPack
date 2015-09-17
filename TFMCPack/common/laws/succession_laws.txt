@@ -796,10 +796,46 @@ gender_laws = {
 		female_dynasty_opinion = 20
 		
 		potential = {
-			always = no # For modders only
+			holder_scope = { 
+				NOT = { religion_group = muslim }
+				NOT = { religion = aztec }
+				NOT = { religion = aztec_reformed }
+				is_tribal = no
+				is_nomadic = no
+				has_horde_culture = no
+				is_merchant_republic = no
+				is_patrician = no
+			}
+			
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = no
+					is_republic = no
+				}
+				holder_scope = {
+					is_theocracy = no
+					is_republic = no
+				}
+			}
+			
+			is_primary_type_title = no
+			is_female = yes
 		}
 		allow = {
-			always=yes
+			holder_scope = {
+				OR = {
+					culture = basque
+					religion = cathar
+					religion = messalian
+				}
+				OR = {
+					is_female = yes
+					piety = 100
+				}
+			}
 		}
 		effect = {
 			gender_succ = enatic
@@ -814,10 +850,46 @@ gender_laws = {
 		female_dynasty_opinion = 10
 		
 		potential = {
-			always = no # For modders only
+			holder_scope = { 
+				NOT = { religion_group = muslim }
+				NOT = { religion = aztec }
+				NOT = { religion = aztec_reformed }
+				is_tribal = no
+				is_nomadic = no
+				has_horde_culture = no
+				is_merchant_republic = no
+				is_patrician = no
+			}
+			
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = no
+					is_republic = no
+				}
+				holder_scope = {
+					is_theocracy = no
+					is_republic = no
+				}
+			}
+			
+			is_primary_type_title = no
+			is_female = yes
 		}
 		allow = {
-			always=yes
+			holder_scope = {
+				OR = {
+					culture = basque
+					religion = cathar
+					religion = messalian
+				}
+				OR = {
+					is_female = yes
+					piety = 250
+				}
+			}
 		}
 		effect = {
 			gender_succ = enatic_cognatic
